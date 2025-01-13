@@ -11,10 +11,9 @@
     font-family: 'CarbonPlusRegular', sans-serif !important;
   }
 
-  body {
-    font-family: 'CarbonPlusRegular', sans-serif;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'CarbonPlusRegular', sans-serif;
-  }
+  /* Exclude icons from font override */
+ [class*="icon"], /* Matches classes like icon-* */
+ [class^="fa"],   /* Matches classes starting with fa (Font Awesome) */
+ i, svg {         /* Matches <i> and <svg> elements often used for icons */
+   font-family: inherit !important;
+ }
