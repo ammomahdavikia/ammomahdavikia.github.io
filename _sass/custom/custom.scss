@@ -1,16 +1,16 @@
 @font-face {
     font-family: 'CarbonPlusRegular';
-    src: url('/assets/fonts/carbonplus-regular-bl.otf') format('opentype'),
-         url('/assets/fonts/CarbonPlusRegular.woff') format('woff'),
-         url('/assets/fonts/CarbonPlusRegular.woff2') format('woff2');
+    src: url('/_assets/fonts/carbonplus-regular-bl.otf') format('opentype'),
+         url('/_assets/fonts/CarbonPlusRegular.woff') format('woff'),
+         url('/_assets/fonts/CarbonPlusRegular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
   }
   
   body {
-    font-family: 'CarbonPlusRegular', sans-serif;
+    font-family: 'CarbonPlusRegular', Arial, sans-serif;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'CarbonPlusRegular', sans-serif;
+    font-family: 'CarbonPlusRegular', Arial, sans-serif;
   }
