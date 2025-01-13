@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'CarbonPlusRegular';
+    src: url('/assets/fonts/carbonplus-regular-bl.otf') format('opentype'),
+         url('/assets/fonts/CarbonPlusRegular.woff') format('woff'),
+         url('/assets/fonts/CarbonPlusRegular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  body {
+    font-family: 'CarbonPlusRegular', sans-serif;
+  }
