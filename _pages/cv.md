@@ -9,37 +9,40 @@ redirect_from:
 
 {% include base_path %}
 
+[Download Resume](files/Resume-Amirmohammad.pdf){: .btn }
+
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* 2020 - Expected 2027
+  * M.D. in Tehran University of Medical Sciences (TUMS)
 
-Work experience
+Experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * Github University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* 2023 - Present
+  * Machine Learning Developer
+  * NLP | Computer Vision | VLMs
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* Sep 2020 - Dec 2022
+  * Biology Teacher
+  * Biochemistry | Cellular & Molecular biology | Genetics | Biostatistics
 
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
+Projects
+======
+* SPIDER | RSNA2024 competition
+  * Designed a pipeline using nnUNet for automatic segmentation of lumbar spinal MRI images, handling 35GB of DICOM and NIfTI formats, with deep knowledge of metadata extraction. Created slice-based pipelines, merging different modality images for better spatial information extraction.
+
+* DarooGAP | [HuggingFace](https://huggingface.co/datasets/amirmmahdavikia/darooyab_qa)
+  * Developed a Persian-language Medicare chatbot powered by a Retrieval-Augmented Generation (RAG) framework. The dataset, meticulously curated from certified web sources, encompasses over 12,000 pharmaceutical questions and their corresponding answers. This chatbot delivers precise, context-aware responses, tailored to the unique needs of Persian-speaking users.
+
+* Dezhban | Restricted access (Available upon request)
+  * Built a hybrid model to identify suspected fraudulent drug prescriptions and claims using supervised and unsupervised learning algorithms.
+
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Languages: Python | C++
+* Frameworks: PyTorch | Transformers | TensorFlow | Keras | timm | CUDA | Ollama | LangChain | LlamaIndex | Scikit-learn | XGBoost | Numpy | Pandas | Plotly | Matplotlib | Seaborn
+* Medical Imaging: MONAI | SimpleITK | Pydicom
+* Tools: Git | MongoDB | Streamlit | Jupyter
 
 Publications
 ======
