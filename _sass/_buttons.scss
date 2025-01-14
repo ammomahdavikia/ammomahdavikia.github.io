@@ -13,7 +13,7 @@
   padding: 0.5em 1em;
   color: #fff !important;
   font-family: 'CarbonPlusRegular', $sans-serif;
-  font-size: $type-size-6;
+  font-size: $type-size-5;
   font-weight: bold;
   text-align: center;
   text-decoration: none;
@@ -136,18 +136,18 @@
   /* extra large button */
 
   &--x-large {
-    font-size: $type-size-4;
+    font-size: $type-size-3;
   }
 
   /* large button */
 
   &--large {
-    font-size: $type-size-5;
+    font-size: $type-size-4;
   }
 
   /* small button */
 
   &--small {
-    font-size: $type-size-7;
+    font-size: $type-size-6;
   }
 }
