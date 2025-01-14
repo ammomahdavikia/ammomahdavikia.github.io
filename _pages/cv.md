@@ -40,8 +40,9 @@ Skills
 * __Languages__: Python, C++
 * __Frameworks__: PyTorch, Transformers, TensorFlow, Keras, timm, CUDA, Ollama, LangChain, LlamaIndex, Scikit-learn, XGBoost, Numpy, Pandas, Plotly, Matplotlib, Seaborn
 * __Medical Imaging__: MONAI, SimpleITK, Pydicom
-* __Tools__: Git, MongoDB, Streamlit, Jupyter
+* __Tools__: Git, MongoDB, Streamlit, Jupyter  
 
 
-[Download Full Resume](/files/Resume-Amirmohammad.pdf){: .btn }
+[Download Full Resume](/files/Resume-Amirmohammad.pdf){: .btn }  
+
 <a href="/files/Resume-Amirmohammad.pdf" class="btn btn--centered">Download Resume</a>
