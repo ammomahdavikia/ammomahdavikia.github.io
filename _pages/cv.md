@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-[Download Resume](files/Resume-Amirmohammad.pdf){: .btn }
+[Download Resume](/files/Resume-Amirmohammad.pdf){: .btn }
 
 Education
 ======
@@ -43,25 +43,3 @@ Skills
 * __Frameworks__: PyTorch, Transformers, TensorFlow, Keras, timm, CUDA, Ollama, LangChain, LlamaIndex, Scikit-learn, XGBoost, Numpy, Pandas, Plotly, Matplotlib, Seaborn
 * __Medical Imaging__: MONAI, SimpleITK, Pydicom
 * __Tools__: Git, MongoDB, Streamlit, Jupyter
-
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
