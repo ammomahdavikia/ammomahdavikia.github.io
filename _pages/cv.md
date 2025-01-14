@@ -42,10 +42,7 @@ Skills
 * __Medical Imaging__: MONAI, SimpleITK, Pydicom
 * __Tools__: Git, MongoDB, Streamlit, Jupyter  
 
-
-[Download Full Resume](/files/Resume-Amirmohammad.pdf){: .btn }  
-
-
 <div class="button-wrapper">
-    <a href="/files/Resume-Amirmohammad.pdf" class="btn btn--centered">Download Full Resume</a>
+    <a href="/files/Resume-Amirmohammad.pdf" class="btn btn--centered" target="_blank" download="/files/Resume-Amirmohammad.pdf">
+    Download Full Resume</a>
 </div>
