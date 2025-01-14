@@ -43,6 +43,6 @@ Skills
 * __Tools__: Git, MongoDB, Streamlit, Jupyter  
 
 <div class="button-wrapper">
-    <a href="/files/Resume-Amirmohammad.pdf" class="btn btn--centered" target="_blank" download="/files/Resume-Amirmohammad.pdf">
+    <a href="/files/Resume-Amirmohammad.pdf" class="btn btn--centered" target="_blank" download="Resume-Amirmohammad.pdf">
     Download Full Resume</a>
 </div>
