@@ -42,6 +42,7 @@ Skills
 * __Medical Imaging__: MONAI, SimpleITK, Pydicom
 * __Tools__: Git, MongoDB, Streamlit, Jupyter  
 
+<br><br>
 <div class="button-wrapper">
     <a href="/files/Resume-Amirmohammad.pdf" class="btn btn--centered" target="_blank" download="Resume-Amirmohammad.pdf">
     Download Full Resume</a>
