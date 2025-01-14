@@ -9,8 +9,6 @@ redirect_from:
 
 {% include base_path %}
 
-[Download Resume](/files/Resume-Amirmohammad.pdf){: .btn }
-
 Education
 ======
 * 2020 - Expected 2027
@@ -43,3 +41,7 @@ Skills
 * __Frameworks__: PyTorch, Transformers, TensorFlow, Keras, timm, CUDA, Ollama, LangChain, LlamaIndex, Scikit-learn, XGBoost, Numpy, Pandas, Plotly, Matplotlib, Seaborn
 * __Medical Imaging__: MONAI, SimpleITK, Pydicom
 * __Tools__: Git, MongoDB, Streamlit, Jupyter
+
+
+[Download Full Resume](/files/Resume-Amirmohammad.pdf){: .btn }
+<a href="resume.pdf" class="btn btn--centered">Download Resume</a>
