@@ -40,6 +40,11 @@
     transform: scale(0.95);
   }
 
+  .btn--centered {
+    font-size: 20px;  // Custom size.
+    margin: 0 auto;   // Centers the button horizontally in block layout.
+  }
+
 
   /* Apply to specific sections */
  .navbar, /* For layout bar */
