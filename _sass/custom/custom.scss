@@ -40,10 +40,17 @@
     transform: scale(0.95);
   }
 
-  .btn--centered {
-    font-size: 20px;  // Custom size.
-    margin: 0 auto;   // Centers the button horizontally in block layout.
-  }
+  .button-wrapper {
+    display: flex;               // Enables Flexbox layout.
+    justify-content: center;     // Horizontally centers the button.
+    align-items: center;         // Vertically centers the button.
+    margin-top: 50px;            // Adjust to fine-tune the vertical position.
+    height: 150px;               // Set the height of the section for positioning.
+ }
+
+ .btn--centered {
+     font-size: 18px;             // Adjust font size as needed.
+ }
 
 
   /* Apply to specific sections */
