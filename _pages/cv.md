@@ -20,29 +20,29 @@ Experience
 ======
 * 2023 - Present
   * Machine Learning Developer
-  * NLP | Computer Vision | VLMs
+  * NLP, Computer Vision, VLMs
 
 * Sep 2020 - Dec 2022
   * Biology Teacher
-  * Biochemistry | Cellular & Molecular biology | Genetics | Biostatistics
+  * Biochemistry, Cellular & Molecular biology, Genetics, Biostatistics
 
 Projects
 ======
-* SPIDER | RSNA2024 competition
+* SPIDER: RSNA2024 competition
   * Designed a pipeline using nnUNet for automatic segmentation of lumbar spinal MRI images, handling 35GB of DICOM and NIfTI formats, with deep knowledge of metadata extraction. Created slice-based pipelines, merging different modality images for better spatial information extraction.
 
-* DarooGAP | [HuggingFace](https://huggingface.co/datasets/amirmmahdavikia/darooyab_qa)
+* DarooGAP: [HuggingFace](https://huggingface.co/datasets/amirmmahdavikia/darooyab_qa)
   * Developed a Persian-language Medicare chatbot powered by a Retrieval-Augmented Generation (RAG) framework. The dataset, meticulously curated from certified web sources, encompasses over 12,000 pharmaceutical questions and their corresponding answers. This chatbot delivers precise, context-aware responses, tailored to the unique needs of Persian-speaking users.
 
-* Dezhban | Restricted access (Available upon request)
+* Dezhban: Restricted access (Available upon request)
   * Built a hybrid model to identify suspected fraudulent drug prescriptions and claims using supervised and unsupervised learning algorithms.
 
 Skills
 ======
-* Languages: Python | C++
-* Frameworks: PyTorch | Transformers | TensorFlow | Keras | timm | CUDA | Ollama | LangChain | LlamaIndex | Scikit-learn | XGBoost | Numpy | Pandas | Plotly | Matplotlib | Seaborn
-* Medical Imaging: MONAI | SimpleITK | Pydicom
-* Tools: Git | MongoDB | Streamlit | Jupyter
+* __Languages__: Python, C++
+* __Frameworks__: PyTorch, Transformers, TensorFlow, Keras, timm, CUDA, Ollama, LangChain, LlamaIndex, Scikit-learn, XGBoost, Numpy, Pandas, Plotly, Matplotlib, Seaborn
+* __Medical Imaging__: MONAI, SimpleITK, Pydicom
+* __Tools__: Git, MongoDB, Streamlit, Jupyter
 
 Publications
 ======
