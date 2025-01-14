@@ -15,6 +15,32 @@
     font-family: 'CarbonPlusRegular', sans-serif;
   }
   
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'CarbonPlusRegular', sans-serif; /* Replace with your custom font */
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #007acc;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .btn:hover {
+    background-color: #005f99;
+    transform: scale(1.05);
+  }
+  
+  .btn:active {
+    background-color: #004d80;
+    transform: scale(0.95);
+  }
+
+
   /* Apply to specific sections */
  .navbar, /* For layout bar */
  .info-section, /* Replace with actual class for the info section */

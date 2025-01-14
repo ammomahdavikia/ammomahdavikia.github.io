@@ -28,13 +28,13 @@ Experience
 
 Projects
 ======
-* SPIDER: RSNA2024 competition
+* __SPIDER__: RSNA2024 competition
   * Designed a pipeline using nnUNet for automatic segmentation of lumbar spinal MRI images, handling 35GB of DICOM and NIfTI formats, with deep knowledge of metadata extraction. Created slice-based pipelines, merging different modality images for better spatial information extraction.
 
-* DarooGAP: [HuggingFace](https://huggingface.co/datasets/amirmmahdavikia/darooyab_qa)
+* __DarooGAP__: [HuggingFace](https://huggingface.co/datasets/amirmmahdavikia/darooyab_qa)
   * Developed a Persian-language Medicare chatbot powered by a Retrieval-Augmented Generation (RAG) framework. The dataset, meticulously curated from certified web sources, encompasses over 12,000 pharmaceutical questions and their corresponding answers. This chatbot delivers precise, context-aware responses, tailored to the unique needs of Persian-speaking users.
 
-* Dezhban: Restricted access (Available upon request)
+* __Dezhban__: Restricted access (Available upon request)
   * Built a hybrid model to identify suspected fraudulent drug prescriptions and claims using supervised and unsupervised learning algorithms.
 
 Skills
