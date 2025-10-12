@@ -1,0 +1,248 @@
+---
+permalink: /
+title: ""
+author_profile: true
+redirect_from: 
+  - /about/
+  - /about.html
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            font-size: 2em;
+            margin-bottom: 0.5em;
+            color: #222;
+        }
+        
+        p {
+            margin-bottom: 1em;
+            font-size: 1.05em;
+        }
+        
+        #game-container {
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        #gameCanvas {
+            border: 1px solid #ddd;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+            background: white;
+        }
+        
+        .controls {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        button {
+            padding: 8px 16px;
+            font-size: 14px;
+            border: 1px solid #36454F;
+            background: white;
+            color: #36454F;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+        
+        button:hover {
+            background: #36454F;
+            color: white;
+        }
+        
+        button:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+    <h1>About me</h1>
+    <p>I am a medical student fascinated by the mind-bending complexity of life and its ultimate masterpiece: intelligence. With a background in biology and machine learning, I'm on an exciting journey to explore how intelligence, whether it's born from nature or crafted by humans, emerges, adapts, and evolves. My research interests span applications of AI in computational biology, medical imaging, and complex systems. I like games and enjoy teaching machines to learn about the world and ultimate game of life.</p>
+    
+    <div id="game-container">
+        <canvas id="gameCanvas" width="600" height="300"></canvas>
+        <div class="controls">
+            <button id="playPauseBtn">Pause</button>
+            <button id="resetBtn">Reset</button>
+            <button id="clearBtn">Clear</button>
+            <button id="randomBtn">Randomize</button>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        const CELL_SIZE = 10;
+        const COLS = canvas.width / CELL_SIZE;
+        const ROWS = canvas.height / CELL_SIZE;
+        const ALIVE_COLOR = '#36454F';
+        const DEAD_COLOR = '#FFFFFF';
+        
+        let grid = [];
+        let running = true;
+        let initialGrid = [];
+        
+        // Initialize grid with a simple pattern
+        function initGrid() {
+            grid = [];
+            for (let i = 0; i < ROWS; i++) {
+                grid[i] = [];
+                for (let j = 0; j < COLS; j++) {
+                    grid[i][j] = 0;
+                }
+            }
+            
+            // Add a glider
+            grid[5][10] = 1;
+            grid[6][11] = 1;
+            grid[7][9] = 1;
+            grid[7][10] = 1;
+            grid[7][11] = 1;
+            
+            // Add a blinker
+            grid[10][20] = 1;
+            grid[10][21] = 1;
+            grid[10][22] = 1;
+            
+            // Add a toad
+            grid[15][30] = 1;
+            grid[15][31] = 1;
+            grid[15][32] = 1;
+            grid[16][29] = 1;
+            grid[16][30] = 1;
+            grid[16][31] = 1;
+            
+            // Add a beacon
+            grid[20][40] = 1;
+            grid[20][41] = 1;
+            grid[21][40] = 1;
+            grid[22][43] = 1;
+            grid[23][42] = 1;
+            grid[23][43] = 1;
+            
+            // Save initial state
+            initialGrid = grid.map(row => [...row]);
+        }
+        
+        function drawGrid() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            for (let i = 0; i < ROWS; i++) {
+                for (let j = 0; j < COLS; j++) {
+                    ctx.fillStyle = grid[i][j] ? ALIVE_COLOR : DEAD_COLOR;
+                    ctx.fillRect(j * CELL_SIZE, i * CELL_SIZE, CELL_SIZE, CELL_SIZE);
+                    
+                    // Draw grid lines
+                    ctx.strokeStyle = '#f0f0f0';
+                    ctx.strokeRect(j * CELL_SIZE, i * CELL_SIZE, CELL_SIZE, CELL_SIZE);
+                }
+            }
+        }
+        
+        function countNeighbors(row, col) {
+            let count = 0;
+            for (let i = -1; i <= 1; i++) {
+                for (let j = -1; j <= 1; j++) {
+                    if (i === 0 && j === 0) continue;
+                    const newRow = (row + i + ROWS) % ROWS;
+                    const newCol = (col + j + COLS) % COLS;
+                    count += grid[newRow][newCol];
+                }
+            }
+            return count;
+        }
+        
+        function updateGrid() {
+            const newGrid = [];
+            for (let i = 0; i < ROWS; i++) {
+                newGrid[i] = [];
+                for (let j = 0; j < COLS; j++) {
+                    const neighbors = countNeighbors(i, j);
+                    if (grid[i][j] === 1) {
+                        newGrid[i][j] = (neighbors === 2 || neighbors === 3) ? 1 : 0;
+                    } else {
+                        newGrid[i][j] = (neighbors === 3) ? 1 : 0;
+                    }
+                }
+            }
+            grid = newGrid;
+        }
+        
+        function gameLoop() {
+            if (running) {
+                updateGrid();
+            }
+            drawGrid();
+            setTimeout(gameLoop, 150);
+        }
+        
+        // Canvas click handler
+        canvas.addEventListener('click', (e) => {
+            const rect = canvas.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const col = Math.floor(x / CELL_SIZE);
+            const row = Math.floor(y / CELL_SIZE);
+            
+            if (row >= 0 && row < ROWS && col >= 0 && col < COLS) {
+                grid[row][col] = grid[row][col] ? 0 : 1;
+                drawGrid();
+            }
+        });
+        
+        // Control buttons
+        document.getElementById('playPauseBtn').addEventListener('click', () => {
+            running = !running;
+            document.getElementById('playPauseBtn').textContent = running ? 'Pause' : 'Play';
+        });
+        
+        document.getElementById('resetBtn').addEventListener('click', () => {
+            grid = initialGrid.map(row => [...row]);
+            drawGrid();
+        });
+        
+        document.getElementById('clearBtn').addEventListener('click', () => {
+            for (let i = 0; i < ROWS; i++) {
+                for (let j = 0; j < COLS; j++) {
+                    grid[i][j] = 0;
+                }
+            }
+            drawGrid();
+        });
+        
+        document.getElementById('randomBtn').addEventListener('click', () => {
+            for (let i = 0; i < ROWS; i++) {
+                for (let j = 0; j < COLS; j++) {
+                    grid[i][j] = Math.random() > 0.7 ? 1 : 0;
+                }
+            }
+            drawGrid();
+        });
+        
+        // Initialize and start
+        initGrid();
+        gameLoop();
+    </script>
+</body>
+</html>
