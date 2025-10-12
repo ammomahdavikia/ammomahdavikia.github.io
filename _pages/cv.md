@@ -36,7 +36,7 @@ Projects
 * __DarooGAP__: [HuggingFace](https://huggingface.co/datasets/amirmmahdavikia/darooyab_qa)
   * Developed a Persian-language Medicare chatbot powered by a Retrieval-Augmented Generation (RAG) framework. The dataset, meticulously curated from certified web sources, encompasses over 12,000 pharmaceutical questions and their corresponding answers. This chatbot delivers precise, context-aware responses, tailored to the unique needs of Persian-speaking users.
 
-* __UTAI hackathon__: [LinkedIn](https://www.linkedin.com/posts/utai-tehran-university-hackaton-59b319338_%D8%AF%D8%B1-%D8%B1%D8%A7%D8%B3%D8%AA%D8%A7%DB%8C-%D9%BE%D8%B1%D8%B1%D9%86%DA%AF%D8%AA%D8%B1-%D8%B4%D8%AF%D9%86-%D9%86%D9%82%D8%B4-%D9%87%D9%88%D8%B4-%D9%85%D8%B5%D9%86%D9%88%D8%B9%DB%8C-%D8%AF%D8%B1-activity-7261634647401369600-FIMr/) | 3rd place winner
+* __UTAI hackathon__: [LinkedIn](https://www.linkedin.com/posts/utai-tehran-university-hackaton-59b319338_%D8%AF%D8%B1-%D8%B1%D8%A7%D8%B3%D8%AA%D8%A7%DB%8C-%D9%BE%D8%B1%D8%B1%D9%86%DA%AF%D8%AA%D8%B1-%D8%B4%D8%AF%D9%86-%D9%86%D9%82%D8%B4-%D9%87%D9%88%D8%B4-%D9%85%D8%B5%D9%86%D9%88%D8%B9%DB%8C-%D8%AF%D8%B1-activity-7261634647401369600-FIMr/) - 3rd place winner
   * Developed an object detection model for vehicle damage assessment to support insurance claim automation during computer vision hackathon hosted by University of Tehran.
 
 * __Dezhban__: Restricted access (Available upon request)
