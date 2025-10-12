@@ -9,33 +9,20 @@ redirect_from:
 
 <p>I am a medical student fascinated by the mind-bending complexity of life and its ultimate masterpiece: intelligence. With a background in biology and machine learning, I'm on an exciting journey to explore how intelligence, whether it's born from nature or crafted by humans, emerges, adapts, and evolves. My research interests span applications of AI in computational biology, medical imaging, and complex systems. I like games and enjoy teaching machines to learn about the world and ultimate game of life.</p>
 
-<div id="game-container" style="margin: 40px auto; text-align: center; max-width: 100%;">
-    <canvas id="gameCanvas" width="800" height="400" style="border: 1px solid #ddd; cursor: pointer; display: block; margin: 0 auto; background: white; max-width: 100%;"></canvas>
-    <div class="controls" style="margin-top: 15px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
-        <button id="playPauseBtn" style="padding: 8px 16px; font-size: 14px; border: 1px solid #36454F; background: white; color: #36454F; cursor: pointer; border-radius: 4px;">Pause</button>
-        <button id="resetBtn" style="padding: 8px 16px; font-size: 14px; border: 1px solid #36454F; background: white; color: #36454F; cursor: pointer; border-radius: 4px;">Reset</button>
-        <button id="clearBtn" style="padding: 8px 16px; font-size: 14px; border: 1px solid #36454F; background: white; color: #36454F; cursor: pointer; border-radius: 4px;">Clear</button>
-        <button id="randomBtn" style="padding: 8px 16px; font-size: 14px; border: 1px solid #36454F; background: white; color: #36454F; cursor: pointer; border-radius: 4px;">Randomize</button>
-    </div>
+<div style="margin: 40px auto; text-align: center;">
+    <canvas id="gameCanvas" width="800" height="400" style="border: 1px solid #ddd; display: block; margin: 0 auto; background: white; max-width: 100%;"></canvas>
 </div>
 
 <script type="text/javascript">
 (function() {
     'use strict';
     
-    // Wait for DOM to be fully loaded
     function initGame() {
         var canvas = document.getElementById('gameCanvas');
-        if (!canvas) {
-            console.error('Canvas not found');
-            return;
-        }
+        if (!canvas) return;
         
         var ctx = canvas.getContext('2d');
-        if (!ctx) {
-            console.error('Could not get canvas context');
-            return;
-        }
+        if (!ctx) return;
         
         var CELL_SIZE = 10;
         var COLS = Math.floor(canvas.width / CELL_SIZE);
@@ -44,8 +31,6 @@ redirect_from:
         var DEAD_COLOR = '#FFFFFF';
         
         var grid = [];
-        var running = true;
-        var initialGrid = [];
         var lastUpdate = Date.now();
         var UPDATE_INTERVAL = 150;
         
@@ -88,14 +73,6 @@ redirect_from:
             grid[centerRow + 7][centerCol + 18] = 1;
             grid[centerRow + 8][centerCol + 17] = 1;
             grid[centerRow + 8][centerCol + 18] = 1;
-            
-            initialGrid = [];
-            for (var i = 0; i < ROWS; i++) {
-                initialGrid[i] = [];
-                for (var j = 0; j < COLS; j++) {
-                    initialGrid[i][j] = grid[i][j];
-                }
-            }
         }
         
         function drawGrid() {
@@ -144,80 +121,18 @@ redirect_from:
         function gameLoop() {
             var now = Date.now();
             if (now - lastUpdate >= UPDATE_INTERVAL) {
-                if (running) {
-                    updateGrid();
-                }
+                updateGrid();
                 drawGrid();
                 lastUpdate = now;
             }
             requestAnimationFrame(gameLoop);
         }
         
-        canvas.addEventListener('click', function(e) {
-            var rect = canvas.getBoundingClientRect();
-            var x = e.clientX - rect.left;
-            var y = e.clientY - rect.top;
-            var col = Math.floor(x / CELL_SIZE);
-            var row = Math.floor(y / CELL_SIZE);
-            
-            if (row >= 0 && row < ROWS && col >= 0 && col < COLS) {
-                grid[row][col] = grid[row][col] ? 0 : 1;
-                drawGrid();
-            }
-        });
-        
-        var playPauseBtn = document.getElementById('playPauseBtn');
-        var resetBtn = document.getElementById('resetBtn');
-        var clearBtn = document.getElementById('clearBtn');
-        var randomBtn = document.getElementById('randomBtn');
-        
-        if (playPauseBtn) {
-            playPauseBtn.addEventListener('click', function() {
-                running = !running;
-                playPauseBtn.textContent = running ? 'Pause' : 'Play';
-            });
-        }
-        
-        if (resetBtn) {
-            resetBtn.addEventListener('click', function() {
-                for (var i = 0; i < ROWS; i++) {
-                    for (var j = 0; j < COLS; j++) {
-                        grid[i][j] = initialGrid[i][j];
-                    }
-                }
-                drawGrid();
-            });
-        }
-        
-        if (clearBtn) {
-            clearBtn.addEventListener('click', function() {
-                for (var i = 0; i < ROWS; i++) {
-                    for (var j = 0; j < COLS; j++) {
-                        grid[i][j] = 0;
-                    }
-                }
-                drawGrid();
-            });
-        }
-        
-        if (randomBtn) {
-            randomBtn.addEventListener('click', function() {
-                for (var i = 0; i < ROWS; i++) {
-                    for (var j = 0; j < COLS; j++) {
-                        grid[i][j] = Math.random() > 0.7 ? 1 : 0;
-                    }
-                }
-                drawGrid();
-            });
-        }
-        
-        console.log('Game of Life initialized');
         initGrid();
         drawGrid();
         requestAnimationFrame(gameLoop);
     }
     
-    // Initialize when DOM is ready
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', initGame);
     } else {
