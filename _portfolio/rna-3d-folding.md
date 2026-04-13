@@ -7,7 +7,6 @@ tags:
   - Structural Biology
   - PyTorch
   - AlphaFold3
-  - Ensemble Learning
   - Kaggle
 header:
   teaser: images/projects/rna-teaser.png
