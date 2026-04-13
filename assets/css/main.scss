@@ -41,3 +41,17 @@
 @import "vendor/font-awesome/brands";
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
+
+.research-tags {
+    margin: 1.2em 0;
+    .tag {
+      display: inline-block;
+      background: #2a4a6b;
+      color: #e8f0f7;
+      border-radius: 4px;
+      padding: 4px 10px;
+      margin: 4px 3px;
+      font-size: 0.78em;
+      letter-spacing: 0.03em;
+    }
+  }

@@ -11,7 +11,7 @@ locale                   : "en-US"
 title                    : "Amirmohammad Mahdavikia"
 title_separator          : "-"
 name                     : &name "Amirmohammad Mahdavikia"
-description              : &description "ML develeoper | Medical student"
+description              : &description "Medical AI Researcher building at the intersection of deep learning, medical imaging, and computational biology."
 url                      : https://ammomahdavikia.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "ammomahdavikia/ammomahdavikia.github.io"
@@ -24,9 +24,9 @@ author:
   avatar           : "profile.png"
   name             : "Amirmohammad Mahdavikia"
   pronouns         : # example: "she/her"  
-  bio              : "ML developer | Medical student"
-  location         : "Earth"
-  employer         : "Freelancer"
+  bio              : "Medical AI Researcher · MD Candidate · ML Engineer"
+  location         : "Tehran, Iran"
+  employer         : "TUMS / Freelance"
   uri              : # URL
   email            : "a-mahdavikia@student.tums.ac.ir" 
 
@@ -143,6 +143,13 @@ social:
   name                   : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
 
+# Interests
+interests:
+  - Medical Imaging
+  - Radiology AI
+  - Vision-Language Models
+  - Mixture-of-Experts
+  - Computational Biology
 
 # Analytics
 analytics:
